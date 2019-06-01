@@ -13,7 +13,7 @@ function getDishes() {
 async function addDish(cohort) {
   const [id] = await db('dishes')
     .insert(cohort, 'id');
-  return getDish(id);
+  return { id };
 }
 
 function getDish(id) {
